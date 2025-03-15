@@ -58,7 +58,7 @@ const Navbar = () => {
           <ul className="flex flex-col lg:flex-row gap-6 text-white font-semibold lg:items-center lg:ml-auto">
             <li><a href="/" className="hover:text-cyan-300">Home</a></li>
             <li><a href="/" className="hover:text-cyan-300">About Us</a></li>
-            <li><a href="/" className="hover:text-cyan-300">Tools</a></li>
+            <li><a onClick={() => navigator("/tools")} className="hover:text-cyan-300 cursor-pointer">Tools</a></li>
             <li className="relative dropdown">
               <button 
                 className="flex items-center gap-2 hover:text-cyan-300 focus:outline-none" 
@@ -70,11 +70,11 @@ const Navbar = () => {
               </button>
               {isDropdownOpen && (
                 <ul className="absolute left-0 mt-2 w-64 bg-white text-gray-900 shadow-lg rounded-md p-2 border border-gray-200 z-50 transition-opacity duration-300 ease-in-out opacity-100">
-                  <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800"><FaFileMedical /><a onClick={() => navigator("/healthForm")}  >Medical Report Scanner</a></li>
-                  <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800"><FaSpa /><a onClick={() => navigator("/yoga")}>Personalized Yoga</a></li>
-                  <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800"><FaUserMd /><a onClick={() => navigator("/consultantPage")}>Free Health Consultation</a></li>
-                  <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800"><FaRobot /><a href="/ai-chatbot">Instant AI Chatbot</a></li>
-                  <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800"><FaHeartbeat /><a href="/pregnancy-tools">Health & Pregnancy Tools</a></li>
+                  <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800 cursor-pointer"><FaFileMedical /><a onClick={() => navigator("/healthForm")}  >Medical Report Scanner</a></li>
+                  <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800 cursor-pointer"><FaSpa /><a onClick={() => navigator("/yoga")}>Personalized Yoga</a></li>
+                  <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800 cursor-pointer"><FaUserMd /><a onClick={() => navigator("/consultantPage")}>Free Health Consultation</a></li>
+                  <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800 cursor-pointer"><FaHeartbeat /><a onClick={() => navigator("/tools")}>Health & Pregnancy Tools</a></li>
+                  <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800 cursor-pointer"><FaRobot /><a href="/ai-chatbot">Instant AI Chatbot</a></li>
                 </ul>
               )}
             </li>

@@ -5,7 +5,7 @@ import yoga3 from "../assets/yoga3.jpg";
 
 const ImageSlider = () => {
   // Use the imported images in the array
-  const images = [yoga7, yoga2, yoga3];
+  const images = [yoga2, yoga3, yoga7];
 
   const [currentSlide, setCurrentSlide] = useState(0);
 

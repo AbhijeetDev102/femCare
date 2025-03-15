@@ -29,6 +29,7 @@ export default function LandingPage() {
   return (
     <div>
    <Navbar></Navbar>
+  
     <section
       className="flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-20 bg-gray-100 bg-cover bg-center relative overflow-hidden"
       style={{ backgroundImage: `url(${BgImage})` }}

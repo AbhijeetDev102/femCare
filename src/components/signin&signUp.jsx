@@ -34,12 +34,12 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen ">
       <Navbar />
       <ToastContainer position="top-right" autoClose={3000} />
       {/* Background Image Container */}
       <div
-        className="flex flex-grow items-center justify-center"
+        className="flex flex-grow items-center justify-center "
         style={{
           backgroundImage: `url(${bgImg})`, 
           backgroundSize: "cover",
@@ -47,7 +47,7 @@ export default function AuthPage() {
         }}
       >
         {/* Parent div for image and form */}
-        <div className="flex w-full h-screen bg-white bg-opacity-90 backdrop-blur-sm"> {/* Add a semi-transparent white overlay */}
+        <div className="flex w-full h-screen bg-[#DFF2FF] bg-opacity-90 backdrop-blur-sm"> {/* Updated bg-white to bg-[#DFF2FF] */}
           {/* Image Section */}
           <div className="w-2/3 flex justify-center items-center ">
             <img

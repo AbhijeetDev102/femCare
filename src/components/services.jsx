@@ -11,14 +11,19 @@ const HealthcareCard = ({ image, title, description, points, reverse, onClick })
       className={`bg-white text-gray-800 rounded-xl shadow-lg p-6 flex flex-col ${
         reverse ? "md:flex-row-reverse" : "md:flex-row"
       } items-center gap-6 w-full transition-transform transform hover:scale-105 hover:shadow-2xl cursor-pointer border-l-4 border-teal-500`}
-      onClick={onClick}  
+      onClick={onClick}
     >
-      <img
-        src={image}
-        alt={title}
-        className="w-1/3 h-auto rounded-xl object-cover"
-      />
-      <div className="w-2/3">
+      {/* Image Section */}
+      <div className="w-full md:w-1/3">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-auto rounded-xl object-cover"
+        />
+      </div>
+
+      {/* Content Section */}
+      <div className="w-full md:w-2/3">
         <h3 className="text-xl font-bold text-teal-600 border-b-2 border-teal-400 pb-2 mb-3">
           {title}
         </h3>
@@ -41,7 +46,7 @@ export default function HealthcareCardsSection() {
 
   const handleNavigate = (path) => {
     navigate(path);
-    window.scrollTo(0, 0);  
+    window.scrollTo(0, 0); // Scroll to the top of the page after navigation
   };
 
   return (
@@ -71,11 +76,11 @@ export default function HealthcareCardsSection() {
             "Simple & Effective – Easy-to-follow guided yoga for daily wellness",
           ]}
           reverse={false}
-          onClick={() => handleNavigate("/yoga")} 
+          onClick={() => handleNavigate("/yoga")}
         />
       </div>
 
-      {/* Card 2 */}
+      {/* Card 2 - Navigates to Health Form Page */}
       <div className="w-full max-w-6xl">
         <HealthcareCard
           image={img2}
@@ -92,7 +97,7 @@ export default function HealthcareCardsSection() {
         />
       </div>
 
-      {/* Card 3 */}
+      {/* Card 3 - Navigates to Consultant Page */}
       <div className="w-full max-w-6xl">
         <HealthcareCard
           image={img3}
@@ -112,4 +117,3 @@ export default function HealthcareCardsSection() {
     </section>
   );
 }
-
