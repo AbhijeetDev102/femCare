@@ -8,6 +8,7 @@ import HealthcareCard from "./services.jsx";
 import Footer from "./footer.jsx";
 
 
+
 export default function LandingPage() {
   // Animation variants
   const fadeInUp = {

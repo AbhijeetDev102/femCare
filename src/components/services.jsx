@@ -71,7 +71,7 @@ export default function HealthcareCardsSection() {
             "Simple & Effective – Easy-to-follow guided yoga for daily wellness",
           ]}
           reverse={false}
-          onClick={() => handleNavigate("/yoga")} // ✅ Ensures smooth navigation
+          onClick={() => handleNavigate("/yoga")} 
         />
       </div>
 
@@ -105,6 +105,7 @@ export default function HealthcareCardsSection() {
             "100% Free & Confidential – Your health, your privacy, our priority",
           ]}
           reverse={false}
+          onClick={() => handleNavigate("/consultantPage")}
         />
       </div>
     </section>

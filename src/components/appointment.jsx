@@ -1,5 +1,6 @@
 import React from "react";
-import backgroundImage from "../assets/ipad.png"; 
+import { FaStethoscope, FaHeartbeat, FaGlobe, FaCalendarCheck, FaUserMd, FaShieldAlt } from "react-icons/fa";
+import backgroundImage from "../assets/ipad.png";
 import Footer from "./footer";
 import Navbar from "./navbar";
 
@@ -9,16 +10,45 @@ const AppointmentForm = () => {
       className="relative bg-cover bg-center h-screen flex items-center justify-center px-4 sm:px-10"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      
-      <div className="relative z-10 text-white text-center max-w-2xl">
-        <h1 className="text-4xl font-bold mb-4">We care for you</h1>
-        <p className="text-lg">
+      {/* Overlay (Full Width, Not Full Height) */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 w-full h-auto"></div>
+
+      {/* Left Side Content */}
+      <div className="relative z-10 text-white text-left max-w-2xl mr-8 hidden lg:block p-8 bg-black bg-opacity-35 rounded-lg">
+        <h1 className="text-5xl font-bold mb-6">We Care for You</h1>
+        <p className="text-lg mb-8">
           Medical Services That You Can Trust. Providing exceptional healthcare
           solutions for your well-being.
         </p>
+        <div className="space-y-6">
+          <div className="flex items-center">
+            <FaStethoscope className="text-4xl text-purple-500 mr-4" />
+            <div>
+              <h3 className="text-xl font-semibold">Expert Doctors</h3>
+              <p className="text-gray-200">Highly qualified and experienced professionals.</p>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <FaHeartbeat className="text-4xl text-teal-400 mr-4" />
+            <div>
+              <h3 className="text-xl font-semibold">Advanced Technology</h3>
+              <p className="text-gray-200">State-of-the-art medical equipment.</p>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <FaGlobe className="text-4xl text-cyan-400 mr-4" />
+            <div>
+              <h3 className="text-xl font-semibold">Global Standards</h3>
+              <p className="text-gray-200">World-class healthcare services.</p>
+            </div>
+          </div>
+        </div>
+        <button className="bg-gradient-to-r from-purple-600 to-purple-500 text-white font-semibold py-3 px-6 mt-8 rounded-lg hover:shadow-lg transition-transform transform hover:scale-105">
+          Learn More
+        </button>
       </div>
-      
+
+      {/* Appointment Form */}
       <div className="relative z-10 bg-white p-8 sm:p-12 rounded-lg shadow-2xl max-w-md w-full">
         <h2 className="text-2xl font-bold mb-6 text-gray-800">Make an Appointment</h2>
         <form>
@@ -47,21 +77,21 @@ const Features = () => {
   const features = [
     {
       title: "Health Essentials",
-      icon: "🏥",
+      icon: <FaStethoscope className="text-5xl" />,
       description:
         "Comprehensive health solutions tailored for your needs.",
       bgColor: "bg-gradient-to-r from-purple-300 to-purple-400 text-white",
     },
     {
       title: "Quality & Patient Safety",
-      icon: "❤️",
+      icon: <FaShieldAlt className="text-5xl" />,
       description:
         "Ensuring the highest standards in patient care and safety.",
       bgColor: "bg-gradient-to-r from-gray-300 to-gray-400 text-black",
     },
     {
       title: "Seamless Accessibility",
-      icon: "🌍",
+      icon: <FaGlobe className="text-5xl" />,
       description:
         "Reliable healthcare services with enhanced accessibility.",
       bgColor: "bg-gradient-to-r from-teal-500 to-teal-600 text-white",
@@ -69,13 +99,15 @@ const Features = () => {
   ];
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 gap-6 p-10">
+    <section className="grid grid-cols-1 md:grid-cols-3 gap-6 p-10 bg-gray-50">
       {features.map((feature, index) => (
         <div
           key={index}
           className={`p-8 rounded-lg shadow-xl text-center ${feature.bgColor}`}
         >
-          <span className="text-5xl">{feature.icon}</span>
+          <div className="flex justify-center">
+            {feature.icon}
+          </div>
           <h3 className="text-2xl font-semibold my-4">{feature.title}</h3>
           <p className="text-md font-light">{feature.description}</p>
         </div>
@@ -87,14 +119,13 @@ const Features = () => {
 const Appointment = () => {
   return (
     <div>
-        <Navbar></Navbar>
+      <Navbar />
       <AppointmentForm />
-      <Features />'
-    <Footer></Footer>
+      <Features />
+      <Footer />
     </div>
   );
 };
 
 export default Appointment;
-
 
