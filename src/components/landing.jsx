@@ -6,10 +6,11 @@ import Navbar from './navbar.jsx'
 import CardsSection from "./cardsSection.jsx";
 import HealthcareCard from "./services.jsx";
 import Footer from "./footer.jsx";
-
+import { useNavigate } from "react-router-dom";
 
 
 export default function LandingPage() {
+  const Navigate=useNavigate()
   // Animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -73,7 +74,10 @@ export default function LandingPage() {
           <button className="px-4 sm:px-6 py-2 sm:py-3 text-white bg-teal-600 hover:bg-teal-700 rounded-full text-sm sm:text-lg font-semibold transition-all transform hover:scale-105">
             Read More
           </button>
-          <button className="px-4 sm:px-6 py-2 sm:py-3 text-teal-600 bg-transparent border-2 border-teal-600 hover:bg-teal-600 hover:text-white rounded-full text-sm sm:text-lg font-semibold transition-all transform hover:scale-105">
+          <button className="px-4 sm:px-6 py-2 sm:py-3 text-teal-600 bg-transparent border-2
+           border-teal-600 hover:bg-teal-600 hover:text-white rounded-full text-sm sm:text-lg
+            font-semibold transition-all transform hover:scale-105"
+             onClick={()=>Navigate("/contactUs")}  >
             Contact Us
           </button>
         </motion.div>
