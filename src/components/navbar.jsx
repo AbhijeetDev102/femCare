@@ -78,7 +78,7 @@ const Navbar = () => {
                 </ul>
               )}
             </li>
-            <li><a href="/" className="hover:text-cyan-300">Contact Us</a></li>
+            <li><a onClick={() => navigator("/contactUs")} className="hover:text-cyan-300 cursor-pointer">Contact Us</a></li>
           </ul>
         </nav>
         <div className="flex flex-col lg:flex-row gap-4 mt-4 lg:mt-0">

@@ -6,6 +6,7 @@ import Appointment from "./components/appointment.jsx";
 import DoctorConsultation from "./pages/Consultant.jsx";
 import HealthQuestionnaire from "./pages/healthForm.jsx";
 import ToolsGrid from "./pages/tools.jsx";
+import ContactUs from "./pages/contactUs.jsx";
 function App() {
   return (
     
@@ -18,6 +19,7 @@ function App() {
       <Route path="/consultantPage" element={<DoctorConsultation/>}></Route>
       <Route path="/healthForm" element={<HealthQuestionnaire/>}></Route>
       <Route path="/tools" element={<ToolsGrid/>}></Route>
+      <Route path="/contactUs" element={<ContactUs/>}></Route>
     </Routes>
   );
 }
