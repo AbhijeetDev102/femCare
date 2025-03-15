@@ -4,6 +4,7 @@ import AuthPage from "./components/signin&signUp.jsx";
 import YogaLandingPage from "./pages/yoga.jsx";
 import Appointment from "./components/appointment.jsx";
 import DoctorConsultation from "./pages/Consultant.jsx";
+import HealthQuestionnaire from "./pages/healthForm.jsx"
 function App() {
   return (
     
@@ -12,8 +13,9 @@ function App() {
       <Route path="/signup&signin" element={<AuthPage />} />
       <Route path="/yoga" element={<YogaLandingPage/>}></Route>
       <Route path="/appointment" element={<Appointment/>}></Route>
-      <Route path="/consultantPage" element={<DoctorConsultation/>}></Route>
 
+      <Route path="/consultantPage" element={<DoctorConsultation/>}></Route>
+      <Route path="/healthForm" element={<HealthQuestionnaire/>}></Route>
     </Routes>
   );
 }

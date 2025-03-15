@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import consultantImg from "../assets/th doctor.png";
 import Navbar from "../components/navbar";
 import FreeHealthConsultation from "./conSection";
+// import HealthForm from "./healthForm";
 
 const DoctorConsultation = () => {
   const navigate = useNavigate();

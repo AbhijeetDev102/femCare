@@ -11,7 +11,7 @@ const HealthcareCard = ({ image, title, description, points, reverse, onClick })
       className={`bg-white text-gray-800 rounded-xl shadow-lg p-6 flex flex-col ${
         reverse ? "md:flex-row-reverse" : "md:flex-row"
       } items-center gap-6 w-full transition-transform transform hover:scale-105 hover:shadow-2xl cursor-pointer border-l-4 border-teal-500`}
-      onClick={onClick}  // ✅ Now the entire card is clickable
+      onClick={onClick}  
     >
       <img
         src={image}
@@ -41,7 +41,7 @@ export default function HealthcareCardsSection() {
 
   const handleNavigate = (path) => {
     navigate(path);
-    window.scrollTo(0, 0);  // ✅ Scrolls to top after navigation
+    window.scrollTo(0, 0);  
   };
 
   return (
@@ -88,6 +88,7 @@ export default function HealthcareCardsSection() {
             "Scan medical reports for instant analysis",
             "Receive alerts for potential health risks",
           ]}
+          onClick={() => handleNavigate("/healthForm")}
         />
       </div>
 
