@@ -7,6 +7,8 @@ import DoctorConsultation from "./pages/Consultant.jsx";
 import HealthQuestionnaire from "./pages/healthForm.jsx";
 import ToolsGrid from "./pages/tools.jsx";
 import ContactUs from "./pages/contactUs.jsx";
+// import FemcareChatbot from "./components/chatbot/FemCareChatbot.jsx";
+
 function App() {
   return (
     
@@ -20,6 +22,7 @@ function App() {
       <Route path="/healthForm" element={<HealthQuestionnaire/>}></Route>
       <Route path="/tools" element={<ToolsGrid/>}></Route>
       <Route path="/contactUs" element={<ContactUs/>}></Route>
+     
     </Routes>
   );
 }

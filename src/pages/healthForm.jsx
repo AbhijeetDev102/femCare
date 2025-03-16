@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../components/navbar"; // Import the Navbar component
-
+import FemcareChatbot from "../components/chatbot/FemCareChatbot.jsx";
 const HealthQuestionnaire = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -187,6 +187,7 @@ const HealthQuestionnaire = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#DFF2FF" }}>
       <Navbar /> 
+      <FemcareChatbot></FemcareChatbot>
       <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-md my-6 pb-4"> 
         <h2 className="text-3xl font-bold mb-4 text-gray-900">Women's Health Questionnaire</h2>
         {renderStep()}

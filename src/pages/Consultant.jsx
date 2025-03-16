@@ -5,6 +5,7 @@ import consultantImg from "../assets/th doctor.png";
 import Navbar from "../components/navbar";
 import FreeHealthConsultation from "./conSection";
 // import HealthForm from "./healthForm";
+import FemcareChatbot from "../components/chatbot/FemCareChatbot.jsx";
 
 const DoctorConsultation = () => {
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ const DoctorConsultation = () => {
       <div className="w-full">
         <Navbar />
       </div>
+      <FemcareChatbot></FemcareChatbot>
 
       {/* Content Section */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full p-6 md:px-16 mb-4">

@@ -1,4 +1,5 @@
 import React from "react";
+import FemcareChatbot from "../components/chatbot/FemCareChatbot.jsx";
 import Navbar from "../components/navbar";
 import img1 from "../assets/ovulationCal.png";
 import img2 from "../assets/ovulationCal.png";
@@ -42,7 +43,7 @@ const ToolsGrid = () => {
       <div className="fixed top-0 left-0 w-full z-50">
         <Navbar />
       </div>
-
+      <FemcareChatbot></FemcareChatbot>
  
       <div className="flex flex-col items-center py-24 px-6">
         <h2 className="text-gray-800 text-3xl md:text-4xl font-bold mb-8 tracking-wide">

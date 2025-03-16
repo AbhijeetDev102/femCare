@@ -4,6 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import loginImg from "../assets/login.png";
 import bgImg from "../assets/background.png"; // Import the background image
+import FemcareChatbot from "./chatbot/FemCareChatbot.jsx";
 
 export default function AuthPage() {
   const [isSignUp, setIsSignUp] = useState(true);
@@ -36,6 +37,7 @@ export default function AuthPage() {
   return (
     <div className="flex flex-col min-h-screen ">
       <Navbar />
+      <FemcareChatbot></FemcareChatbot>
       <ToastContainer position="top-right" autoClose={3000} />
       {/* Background Image Container */}
       <div

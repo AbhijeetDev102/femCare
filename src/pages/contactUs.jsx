@@ -1,13 +1,13 @@
 import React from "react";
 import topImage from "../assets/contactimg.jpg"; // Replace with your image path
 import Navbar from "../components/navbar"; // Import the Navbar component
-
+import FemcareChatbot from "../components/chatbot/FemCareChatbot.jsx";
 const ContactUs = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Navbar at the Top */}
       <Navbar />
-
+      <FemcareChatbot></FemcareChatbot>
       {/* Contact Us Section */}
       <div className="flex items-center justify-center p-6">
         <div className="bg-white rounded-xl shadow-2xl overflow-hidden max-w-4xl w-full">

@@ -40,7 +40,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className="flex flex-wrap justify-between items-center px-4 sm:px-10 py-5 bg-teal-600 shadow-lg relative z-50">
+    <header className="flex flex-wrap justify-between items-center px-4 sm:px-10 py-5 bg-teal-600 shadow-lg relative z-1">
       <div className="text-2xl font-bold text-white">
         Fem<span className="text-cyan-300">Care</span>
       </div>
