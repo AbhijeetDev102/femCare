@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { X, MessageCircle, Send, Smile, Paperclip, Image, File } from "lucide-react";
 import { useChat } from "ai/react";
 import { femcareTrainingData } from "../../lib/constants";
-import logoImg from "../../assets/chatbotImg.jpg"; // Import your chatbot logo image
+import logoImg from "../../assets/chatbotimg.png"; // Import your chatbot logo image
 
 export default function FemcareChatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -326,7 +326,7 @@ export default function FemcareChatbot() {
       {/* Chat Button */}
       <button
         onClick={toggleChat}
-        className={`fixed right-6 bottom-6 rounded-full w-14 h-14 shadow-lg z-50 flex items-center justify-center transition-all duration-300 ${
+        className={`fixed right-6 bottom-6 rounded-full w-14 h-14 shadow-lg z-[1000] flex items-center justify-center transition-all duration-300 ${
           isOpen ? "bg-teal-600 text-white rotate-90" : "bg-teal-500 hover:bg-teal-600 text-white"
         }`}
         aria-label={isOpen ? "Close chat" : "Open chat"}
@@ -336,11 +336,11 @@ export default function FemcareChatbot() {
 
       {/* Chat Interface */}
       <div
-        className={`fixed right-6 bottom-24 w-[350px] z-40 transition-all duration-300 ease-in-out transform ${
+        className={`fixed right-6 bottom-32 w-[320px] z-[999] transition-all duration-300 ease-in-out transform ${
           isOpen ? "scale-100 opacity-100" : "scale-95 opacity-0 pointer-events-none"
         }`}
       >
-        <div className="overflow-hidden rounded-2xl shadow-2xl border border-teal-100 flex flex-col h-[500px] bg-white">
+        <div className="overflow-hidden rounded-2xl shadow-2xl border border-teal-100 flex flex-col h-[450px] bg-white">
           {/* Chat Header */}
           <div className="bg-gradient-to-r from-teal-600 to-teal-500 text-white p-4 flex justify-between items-center">
             <div className="flex items-center gap-2">
@@ -412,7 +412,7 @@ export default function FemcareChatbot() {
               <div className="relative">
                 <button
                   type="button"
-                  className="text-gray-400 hover:text-teal-600 p-2 rounded-full hover:bg-gray-100 transition-colors"
+                  className="text-gray-400 hover:text-teal-600  rounded-full hover:bg-gray-100 transition-colors"
                   aria-label="Add emoji"
                   data-emoji-button="true"
                   onClick={(e) => {
@@ -445,14 +445,14 @@ export default function FemcareChatbot() {
               {/* Send button */}
               <button
                 type="submit"
-                className={`rounded-full p-2 text-white transition-colors ${
+                className={`rounded-full p-1.5 text-white transition-colors ${
                   !input.trim() && !uploadedFile
                     ? "bg-teal-400 cursor-not-allowed"
                     : "bg-teal-600 hover:bg-teal-700"
                 }`}
                 disabled={!input.trim() && !uploadedFile}
               >
-                <Send size={18} />
+                <Send size={15} />
               </button>
             </div>
           </form>

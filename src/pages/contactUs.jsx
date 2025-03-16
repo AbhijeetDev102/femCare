@@ -6,10 +6,12 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Navbar at the Top */}
-      <Navbar />
+      <div className="fixed top-0 left-0 w-full z-50">
+        <Navbar />
+      </div>
       <FemcareChatbot></FemcareChatbot>
       {/* Contact Us Section */}
-      <div className="flex items-center justify-center p-6">
+      <div className="flex items-center justify-center p-6 mt-20">
         <div className="bg-white rounded-xl shadow-2xl overflow-hidden max-w-4xl w-full">
           {/* Top Section with Background Image */}
           <div
@@ -26,22 +28,21 @@ const ContactUs = () => {
             <div className="bg-teal-600 text-white p-8 md:w-1/2">
               <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
               <p className="text-gray-200 mb-6">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                tellus luctus nec ullamcorper mattis. Pulvinar dapibus leo.
+              Have questions or need assistance? We’re here to help!
               </p>
 
               {/* Emergency Contact */}
               <div className="mb-6">
                 <h3 className="text-xl font-semibold mb-2">Emergency Contact</h3>
                 <p className="text-gray-200">+981234567890</p>
-                <p className="text-gray-200">support@example.com</p>
+                <p className="text-gray-200">support@Femcare.com</p>
               </div>
 
               {/* Location */}
               <div>
                 <h3 className="text-xl font-semibold mb-2">Location</h3>
                 <p className="text-gray-200">
-                  123 Main Street, City, Country
+                  123 Main Street, New Delhi, India
                 </p>
               </div>
             </div>

@@ -7,7 +7,9 @@ import FemcareChatbot from "../components/chatbot/FemCareChatbot.jsx";
 const YogaLandingPage = () => {
   return (
     <div>
-      <Navbar />
+   <div className="fixed top-0 left-0 w-full z-50">
+        <Navbar />
+      </div>
       <FemcareChatbot></FemcareChatbot>
       <ImageSlider />
       <YogaSection></YogaSection>

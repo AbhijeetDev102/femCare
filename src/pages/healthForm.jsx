@@ -186,9 +186,11 @@ const HealthQuestionnaire = () => {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: "#DFF2FF" }}>
-      <Navbar /> 
+    <div className="fixed top-0 left-0 w-full z-50">
+        <Navbar />
+      </div>
       <FemcareChatbot></FemcareChatbot>
-      <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-md my-6 pb-4"> 
+      <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-md my-6 pb-4 pt-24"> 
         <h2 className="text-3xl font-bold mb-4 text-gray-900">Women's Health Questionnaire</h2>
         {renderStep()}
       </div>

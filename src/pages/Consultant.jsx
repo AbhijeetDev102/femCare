@@ -18,13 +18,13 @@ const DoctorConsultation = () => {
   return (
     <div className="bg-gradient-to-br from-blue-50 to-blue-100 min-h-screen flex flex-col items-center p-0 w-full">
       {/* Navbar */}
-      <div className="w-full">
+      <div className="fixed top-0 left-0 w-full z-50">
         <Navbar />
       </div>
       <FemcareChatbot></FemcareChatbot>
 
       {/* Content Section */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full p-6 md:px-16 mb-4">
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full p-6 md:px-16 mb-4 mt-20">
         {/* Left Content Section */}
         <div className="max-w-2xl text-center md:text-left">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">

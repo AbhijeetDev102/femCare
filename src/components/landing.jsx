@@ -29,10 +29,12 @@ export default function LandingPage() {
 
   return (
     <div>
-   <Navbar></Navbar>
+   <div className="fixed top-0 left-0 w-full z-50">
+        <Navbar />
+      </div>
    <FemcareChatbot></FemcareChatbot>
     <section
-      className="flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-20 bg-gray-100 bg-cover bg-center relative overflow-hidden"
+      className="flex flex-col md:flex-row items-center justify-between min-h-screen px-6 mt-20 md:px-20 bg-gray-100 bg-cover bg-center relative overflow-hidden"
       style={{ backgroundImage: `url(${BgImage})` }}
     >
      
@@ -41,7 +43,7 @@ export default function LandingPage() {
 
       {/* Left Side Content */}
       <motion.div
-        className="w-full md:w-1/2 text-left relative z-10"
+        className="w-full md:w-1/2 text-left relative z-20"
         variants={fadeInLeft}
         initial="hidden"
         animate="visible"

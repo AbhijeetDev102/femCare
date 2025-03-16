@@ -3,6 +3,7 @@ import { FaStethoscope, FaHeartbeat, FaGlobe, FaCalendarCheck, FaUserMd, FaShiel
 import backgroundImage from "../assets/ipad.png";
 import Footer from "./footer";
 import Navbar from "./navbar";
+import FemcareChatbot from "./chatbot/FemCareChatbot.jsx";
 
 const AppointmentForm = () => {
   return (
@@ -120,6 +121,7 @@ const Appointment = () => {
   return (
     <div>
       <Navbar />
+      <FemcareChatbot></FemcareChatbot>
       <AppointmentForm />
       <Features />
       <Footer />

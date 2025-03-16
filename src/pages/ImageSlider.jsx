@@ -34,7 +34,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative w-screen overflow-hidden" style={{ height: "70vh" }}>
+    <div className="relative w-screen overflow-hidden mt-20" style={{ height: "70vh" }}>
       {/* Slides */}
       <div
         className="flex transition-transform duration-500 ease-in-out"
