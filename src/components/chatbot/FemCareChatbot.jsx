@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { X, MessageCircle, Send, Smile, Paperclip, Image, File } from "lucide-react";
 import { useChat } from "ai/react";
 import { femcareTrainingData } from "../../lib/constants";
-import logoImg from "../../assets/chatbotimg.png"; // Import your chatbot logo image
+import logoImg from "../../assets/chatbotImg.png"; // Import your chatbot logo image
 
 export default function FemcareChatbot() {
   const [isOpen, setIsOpen] = useState(false);
