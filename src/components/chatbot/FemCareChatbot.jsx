@@ -394,7 +394,7 @@ export default function FemcareChatbot() {
           {/* Chat Input */}
           <form onSubmit={handleFormSubmit} className="p-3 bg-white border-t border-gray-200">
             <FilePreview />
-            <div className="flex items-center gap-2 relative">
+            <div className="flex items-center gap-1 relative">
               <input
                 value={input}
                 onChange={handleInputChange}

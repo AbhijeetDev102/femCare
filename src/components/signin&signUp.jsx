@@ -35,35 +35,34 @@ export default function AuthPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen ">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <FemcareChatbot></FemcareChatbot>
+      <FemcareChatbot />
       <ToastContainer position="top-right" autoClose={3000} />
       {/* Background Image Container */}
       <div
-        className="flex flex-grow items-center justify-center "
+        className="flex flex-grow items-center justify-center"
         style={{
-          backgroundImage: `url(${bgImg})`, 
+          backgroundImage: `url(${bgImg})`,
           backgroundSize: "cover",
-          backgroundPosition: "center", 
+          backgroundPosition: "center",
         }}
       >
         {/* Parent div for image and form */}
-        <div className="flex w-full h-screen bg-[#DFF2FF] bg-opacity-90 backdrop-blur-sm"> {/* Updated bg-white to bg-[#DFF2FF] */}
+        <div className="flex flex-col md:flex-row w-full h-auto md:h-screen bg-[#DFF2FF] bg-opacity-90 backdrop-blur-sm">
           {/* Image Section */}
-          <div className="w-2/3 flex justify-center items-center ">
+          <div className="w-full md:w-1/2 lg:w-2/3 flex justify-center items-center p-4">
             <img
               src={loginImg}
               alt="Login"
-              className="w-[85%] h-[85%] object-contain"
+              className="w-full h-auto md:w-[85%] md:h-[85%] object-contain"
             />
           </div>
 
           {/* Form Section */}
-          <div className="w-1/3 flex justify-center items-center pr-20">
+          <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center items-center p-4 md:pr-20">
             <div className="w-full max-w-md h-auto">
-              {/* Reduced margin-top for the heading */}
-              <h2 className="text-center text-gray-800 text-2xl font-semibold mb-2"> {/* Reduced mb-4 to mb-2 */}
+              <h2 className="text-center text-gray-800 text-2xl font-semibold mb-2">
                 {isSignUp ? "Create Account" : "Welcome Back"}
               </h2>
 
@@ -80,8 +79,8 @@ export default function AuthPage() {
                 Sign {isSignUp ? "up" : "in"} with Google
               </button>
 
-              {/* Reduced margin-top for the OR divider */}
-              <div className="text-center my-1 text-gray-500">OR</div> {/* Reduced my-2 to my-1 */}
+              {/* OR Divider */}
+              <div className="text-center my-1 text-gray-500">OR</div>
 
               {/* Form */}
               <form onSubmit={handleSubmit}>
@@ -154,8 +153,8 @@ export default function AuthPage() {
               </form>
 
               {/* Toggle between Sign Up and Sign In */}
-              <p className="text-center text-gray-800 mt-2 text-sm"> {/* Reduced mt-3 to mt-2 */}
-                {isSignUp ? "Already have an account?" : "Don't have an account?"} 
+              <p className="text-center text-gray-800 mt-2 text-sm">
+                {isSignUp ? "Already have an account?" : "Don't have an account?"}
                 <span
                   className="text-blue-500 cursor-pointer ml-1 hover:underline"
                   onClick={() => setIsSignUp(!isSignUp)}

@@ -85,7 +85,8 @@ const Navbar = () => {
           <button className="bg-cyan-400 text-white font-semibold px-5 py-2 ml-2 rounded-full shadow-md hover:bg-cyan-300 transition-all transform hover:scale-105" onClick={handleAuthClick}>
             {isLoggedIn ? "Log Out" : "Sign In"}
           </button>
-          <button className="bg-teal-500 text-white font-semibold px-5 py-2 rounded-full shadow-md hover:bg-teal-400 transition-all transform hover:scale-105">
+          <button className="bg-teal-500 text-white font-semibold px-5 py-2 rounded-full shadow-md hover:bg-teal-400 transition-all transform hover:scale-105"
+          onClick={() => navigator("/community")}>
             Community
           </button>
         </div>

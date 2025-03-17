@@ -1,7 +1,14 @@
-import { FaTwitter, FaLinkedin, FaFacebook, FaYoutube, FaInstagram } from "react-icons/fa";
+import { useState } from "react";
+import { FaTwitter, FaLinkedin, FaFacebook, FaYoutube, FaInstagram, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import logo from "../assets/femCareLogo.png";
 
 const Footer = () => {
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isQuickLinksOpen, setIsQuickLinksOpen] = useState(false);
+
+  const toggleServices = () => setIsServicesOpen(!isServicesOpen);
+  const toggleQuickLinks = () => setIsQuickLinksOpen(!isQuickLinksOpen);
+
   return (
     <footer className="bg-teal-600 text-white">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -15,8 +22,20 @@ const Footer = () => {
 
         {/* Services Section */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Services</h3>
-          <ul className="space-y-2">
+          <div
+            className="flex justify-between items-center cursor-pointer sm:cursor-auto"
+            onClick={toggleServices}
+          >
+            <h3 className="text-lg font-semibold mb-3">Services</h3>
+            <span className="sm:hidden">
+              {isServicesOpen ? <FaChevronUp size={16} /> : <FaChevronDown size={16} />}
+            </span>
+          </div>
+          <ul
+            className={`space-y-2 overflow-hidden transition-all duration-300 ${
+              isServicesOpen ? "max-h-40" : "max-h-0"
+            } sm:max-h-40`}
+          >
             <li><a href="#" className="hover:text-gray-300">Health Checkups</a></li>
             <li><a href="#" className="hover:text-gray-300">AI Diagnosis</a></li>
             <li><a href="#" className="hover:text-gray-300">Telemedicine</a></li>
@@ -26,8 +45,20 @@ const Footer = () => {
 
         {/* Quick Links Section */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
-          <ul className="space-y-2">
+          <div
+            className="flex justify-between items-center cursor-pointer sm:cursor-auto"
+            onClick={toggleQuickLinks}
+          >
+            <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
+            <span className="sm:hidden">
+              {isQuickLinksOpen ? <FaChevronUp size={16} /> : <FaChevronDown size={16} />}
+            </span>
+          </div>
+          <ul
+            className={`space-y-2 overflow-hidden transition-all duration-300 ${
+              isQuickLinksOpen ? "max-h-40" : "max-h-0"
+            } sm:max-h-40`}
+          >
             <li><a href="#" className="hover:text-gray-300">About Us</a></li>
             <li><a href="#" className="hover:text-gray-300">Contact</a></li>
             <li><a href="#" className="hover:text-gray-300">Privacy Policy</a></li>

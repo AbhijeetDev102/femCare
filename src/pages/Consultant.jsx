@@ -6,6 +6,7 @@ import Navbar from "../components/navbar";
 import FreeHealthConsultation from "./conSection";
 // import HealthForm from "./healthForm";
 import FemcareChatbot from "../components/chatbot/FemCareChatbot.jsx";
+import Footer from "../components/footer.jsx";
 
 const DoctorConsultation = () => {
   const navigate = useNavigate();
@@ -108,6 +109,12 @@ const DoctorConsultation = () => {
         </div>
       </div>
       <FreeHealthConsultation></FreeHealthConsultation>
+       
+       <div className="w-full">
+
+        <Footer />
+       </div>
+      
     </div>
   );
 };

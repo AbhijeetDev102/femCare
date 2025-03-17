@@ -1,5 +1,5 @@
 import { FaCalendarAlt, FaRobot, FaFileMedical, FaExclamationTriangle, FaUserMd, FaShieldAlt, FaLaptopMedical, FaChartLine } from 'react-icons/fa';
-import Footer from '../components/footer';
+// import Footer from '../components/footer';
 
 const FreeHealthConsultation = () => {
   return (
@@ -35,11 +35,6 @@ const FreeHealthConsultation = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Footer */}
-      <div className="w-full">
-        <Footer />
       </div>
     </div>
   );
