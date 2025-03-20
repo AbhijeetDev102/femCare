@@ -57,7 +57,7 @@ const Navbar = () => {
         <nav>
           <ul className="flex flex-col lg:flex-row gap-6 text-white font-semibold lg:items-center lg:ml-auto">
             <li><a href="/" className="hover:text-cyan-300">Home</a></li>
-            <li><a href="/" className="hover:text-cyan-300">About Us</a></li>
+            <li><a onClick={() => navigator("/aboutUs")} className="hover:text-cyan-300 cursor-pointer">About Us</a></li>
             <li><a onClick={() => navigator("/tools")} className="hover:text-cyan-300 cursor-pointer">Tools</a></li>
             <li className="relative dropdown">
               <button 
