@@ -74,7 +74,7 @@ const Navbar = () => {
                   <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800 cursor-pointer"><FaSpa /><a onClick={() => navigator("/yoga")}>Personalized Yoga</a></li>
                   <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800 cursor-pointer"><FaUserMd /><a onClick={() => navigator("/consultantPage")}>Free Health Consultation</a></li>
                   <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800 cursor-pointer"><FaHeartbeat /><a onClick={() => navigator("/tools")}>Health & Pregnancy Tools</a></li>
-                  <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800 cursor-pointer"><FaRobot /><a href="/ai-chatbot">Instant AI Chatbot</a></li>
+                  <li className="flex items-center gap-2 hover:bg-teal-100 p-2 rounded text-teal-800 cursor-pointer"><FaRobot /><a href="/chatbot">Instant AI Chatbot</a></li>
                 </ul>
               )}
             </li>

@@ -1,14 +1,23 @@
+import axios from "axios";
 import { useState } from "react";
 import Navbar from "../components/navbar";
+import { useContext } from "react";
+import { GlobalContext } from "../Context/GlobalContext";
+import { useNavigate } from "react-router-dom";
+
 
 const MedicalReportScanner = () => {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [isUploading, setIsUploading] = useState(false);
-
-  const handleFileUpload = (event) => {
+  const { setPrescriptionData } = useContext(GlobalContext);
+  const navigate = useNavigate()
+  const handleFileUpload = async (event) => {
     const file = event.target.files[0];
+
     if (file) {
       setIsUploading(true);
+      setUploadProgress(0);
+
       let progress = 0;
       const interval = setInterval(() => {
         progress += 10;
@@ -17,7 +26,31 @@ const MedicalReportScanner = () => {
           clearInterval(interval);
           setIsUploading(false);
         }
-      }, 200);
+      }, 500); 
+      
+      const formData = new FormData();
+      formData.append("file", file);
+
+      try {
+        const response = await axios.post(
+          `${import.meta.env.VITE_BASE_URL}/reportScanner`,
+          formData
+        );
+
+        if (response.status === 200) {
+          const data = response.data.data;
+          setPrescriptionData(data); // Set the response data to global context
+          // console.log(data);
+          navigate('/chatbot')
+
+        } else {
+          console.error("Upload failed");
+        }
+      } catch (error) {
+        console.error("Error uploading file:", error);
+      } finally {
+        setIsUploading(false);
+      }
     }
   };
 
