@@ -3,7 +3,7 @@ import VideoCard from "./VideoCard"
 import VideoPlayer from "./VideoPlayer"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
-// Video data with titles and descriptions
+
 const videoData = [
   {
     id: "short1",
@@ -218,6 +218,19 @@ const VideoSection = () => {
     setIsPlaying(true)
   }, [selectedVideo, videos])
 
+  // Handle carousel scroll
+  const handleScroll = useCallback((direction) => {
+    const carousel = carouselRef.current
+    if (carousel) {
+      const scrollAmount = 300 
+      if (direction === "left") {
+        carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" })
+      } else {
+        carousel.scrollBy({ left: scrollAmount, behavior: "smooth" })
+      }
+    }
+  }, [])
+
   return (
     <div className="space-y-8">
       {selectedVideo && (
@@ -230,7 +243,6 @@ const VideoSection = () => {
         />
       )}
       
-    
       <div className="relative">
         <h2 className="text-2xl font-semibold text-purple-800 mb-4">Browse Videos</h2>
         <button
@@ -283,7 +295,6 @@ const VideoSection = () => {
           </div>
         )
       })}
-
     </div>
   )
 }
