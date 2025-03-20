@@ -1,13 +1,10 @@
-"use client"
-
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useCallback, useRef } from "react"
 import VideoCard from "./VideoCard"
 import VideoPlayer from "./VideoPlayer"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 // Video data with titles and descriptions
 const videoData = [
-  // General Healthcare & Wellness Videos
   {
     id: "short1",
     url: "https://youtube.com/shorts/0nSd0Ep8LCg",
@@ -113,8 +110,6 @@ const videoData = [
     description: "Quick relaxation techniques for busy women.",
     category: "Wellness",
   },
-
-  // Educational Videos
   {
     id: "edu1",
     url: "https://www.youtube.com/watch?v=ekAlNy0PaOk",
@@ -189,7 +184,7 @@ const videoData = [
 
 const VideoSection = () => {
   const [videos, setVideos] = useState(videoData)
-  const [selectedVideo, setSelectedVideo] = useState(videoData[0]) // Default to the first video
+  const [selectedVideo, setSelectedVideo] = useState(videoData[0])
   const [isPlaying, setIsPlaying] = useState(false)
   const carouselRef = useRef(null)
 
@@ -200,27 +195,42 @@ const VideoSection = () => {
     setSelectedVideo(shuffledVideos[0])
   }, [])
 
-  const handleVideoSelect = (video) => {
+  // Handle video selection
+  const handleVideoSelect = useCallback((video) => {
     setSelectedVideo(video)
     setIsPlaying(true)
     window.scrollTo({ top: 0, behavior: "smooth" })
-  }
+  }, [])
 
-  const handleScroll = (direction) => {
-    if (carouselRef.current) {
-      const { current } = carouselRef
-      const scrollAmount = direction === "left" ? current.scrollLeft - 300 : current.scrollLeft + 300
-      current.scrollTo({ left: scrollAmount, behavior: "smooth" })
-    }
-  }
+  // Handle next video
+  const handleNextVideo = useCallback(() => {
+    const currentIndex = videos.findIndex((v) => v.id === selectedVideo.id)
+    const nextIndex = (currentIndex + 1) % videos.length
+    setSelectedVideo(videos[nextIndex])
+    setIsPlaying(true)
+  }, [selectedVideo, videos])
+
+  // Handle previous video
+  const handlePreviousVideo = useCallback(() => {
+    const currentIndex = videos.findIndex((v) => v.id === selectedVideo.id)
+    const prevIndex = (currentIndex - 1 + videos.length) % videos.length
+    setSelectedVideo(videos[prevIndex])
+    setIsPlaying(true)
+  }, [selectedVideo, videos])
 
   return (
     <div className="space-y-8">
       {selectedVideo && (
-        <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 ease-in-out">
-          <VideoPlayer video={selectedVideo} isPlaying={isPlaying} onPlayingChange={setIsPlaying} />
-        </div>
+        <VideoPlayer
+          video={selectedVideo}
+          isPlaying={isPlaying}
+          onPlayingChange={setIsPlaying}
+          onNext={handleNextVideo}
+          onPrevious={handlePreviousVideo}
+        />
       )}
+      
+    
       <div className="relative">
         <h2 className="text-2xl font-semibold text-purple-800 mb-4">Browse Videos</h2>
         <button
@@ -273,6 +283,7 @@ const VideoSection = () => {
           </div>
         )
       })}
+
     </div>
   )
 }

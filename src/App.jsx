@@ -8,8 +8,8 @@ import HealthQuestionnaire from "./pages/healthForm.jsx";
 import ToolsGrid from "./pages/tools.jsx";
 import ContactUs from "./pages/contactUs.jsx";
 import Home from "./pages/Home.jsx";
-
-
+import MedicalReportScanner from "./pages/MedicalReportScanner.jsx";
+import DoctorsList from "./pages/DoctorCard.jsx";
 function App() {
   return (
     
@@ -24,6 +24,8 @@ function App() {
       <Route path="/tools" element={<ToolsGrid/>}></Route>
       <Route path="/contactUs" element={<ContactUs/>}></Route>
       <Route path="/community" element={<Home />}></Route>
+      <Route path="/Medical-Report-Scanner" element={<MedicalReportScanner/>}></Route>
+      <Route path="/doctors" element={<DoctorsList />}></Route>
      
     </Routes>
   );

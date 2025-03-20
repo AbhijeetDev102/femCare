@@ -101,8 +101,8 @@ export default function HealthcareCardsSection() {
       <div className="w-full max-w-6xl">
         <HealthcareCard
           image={img3}
-          title="Free Health Consultation – Expert Guidance at Your Fingertips"
-          description="Get personalized health advice from experts at no cost!"
+          title=" Health Consultation – Expert Guidance at Your Fingertips"
+          description="Get personalized health advice from experts "
           points={[
             "AI-Powered Insights – Understand your health better with smart analysis",
             "Expert Guidance – Connect with professionals for tailored advice",

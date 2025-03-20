@@ -29,16 +29,16 @@ const DoctorConsultation = () => {
         {/* Left Content Section */}
         <div className="max-w-2xl text-center md:text-left">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">
-            Get a <span className="text-blue-600">Free Consultation</span> for Your Women’s Health Needs
+            Get a <span className="text-blue-600"> Consultation</span> for Your Women’s Health Needs
           </h1>
           <p className="mt-4 text-gray-600 text-lg">
-            Have questions about your menstrual cycle, pregnancy, or general women’s health? Our experts are here to help—completely free!
+            Have questions about your menstrual cycle, pregnancy, or general women’s health? Our experts are here to help
           </p>
           <button
             className="mt-6 bg-blue-600 text-white py-3 px-6 rounded-xl hover:bg-blue-700 transition-all transform hover:scale-105"
             onClick={handleNavigation}
           >
-            Start Free Consultation
+            Start  Consultation
           </button>
         </div>
 

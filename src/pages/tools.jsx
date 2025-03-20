@@ -2,16 +2,17 @@ import React from "react";
 import FemcareChatbot from "../components/chatbot/FemCareChatbot.jsx";
 import Navbar from "../components/navbar";
 import img1 from "../assets/ovulationCal.png";
-import img2 from "../assets/ovulationCal.png";
+import img2 from "../assets/babble.png";
 import img3 from "../assets/genderPredictor.jpg";
 import img4 from "../assets/babyNamesFinder.png";
 import img5 from "../assets/weightCal.png";
 import img6 from "../assets/birthPlan.png";
-import img8 from "../assets/ovulationCal.png";
-import img9 from "../assets/soildFeeding.png";
-import img10 from "../assets/childGrowth.png";
-import img11 from "../assets/childHeight.png";
-import img12 from "../assets/ovulationCal.png";
+import img7 from "../assets/registry_builder.png";
+import img8 from "../assets/babbleWord.png";
+import img9 from "../assets/BabyCenter.png";
+import img10 from "../assets/soildFeeding.png";
+import img11 from "../assets/childGrowth.png";
+import img12 from "../assets/childHeight.png";
 
 const tools = [
   { title: "Ovulation Calculator", image: img1 },
@@ -20,8 +21,9 @@ const tools = [
   { title: "Baby Names Finder", image: img4 },
   { title: "Pregnancy Weight Gain Calculator", image: img5 },
   { title: "Birth Plan Worksheet", image: img6 },
-  { title: "Registry Builder", image: img8 },
-  { title: "Baby Costs Calculator", image: img9 },
+  { title: "Registry Builder", image: img7 },
+  { title: "Babble Word Game", image: img8 },
+  { title: "Baby Center", image: img9 },
   { title: "Solid Feeding Guide", image: img10 },
   { title: "Child Growth Chart", image: img11 },
   { title: "Child Height Predictor", image: img12 },

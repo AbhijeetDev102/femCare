@@ -4,11 +4,12 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import video1 from "../videos/video1.mp4";
-import video2 from "../videos/video2.mp4";
-import video3 from "../videos/video3.mp4";
-import video4 from "../videos/video4.mp4";
-import video5 from "../videos/video5.mp4";
+// import video1 from "../videos/video1.mp4";
+import video1 from "../assets/videos/video1.mp4"
+import video2 from "../assets/videos/video2.mp4";
+import video3 from "../assets/videos/video3.mp4";
+import video4 from "../assets/videos/video4.mp4";
+import video5 from "../assets/videos/video5.mp4";
 import img1 from "../assets/t1.png"
 import img2 from "../assets/t2.png"
 import img3 from "../assets/t3.png"
